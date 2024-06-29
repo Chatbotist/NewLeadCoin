@@ -1,0 +1,93 @@
+@import url('common.css');
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 10;
+  padding-top: 20px;
+  user-select: none;
+}
+
+.coin {
+  width: 300px;
+  height: 300px;
+  background: url('leadcoin.png') no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
+  margin: 50px auto 20px auto;
+  transition: transform 0.1s, box-shadow 0.1s;
+  user-select: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 50%;
+  display: block;
+  z-index: 20;
+  position: relative;
+}
+
+.coin.active {
+  transform: scale(0.95);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+#balance, #level, #developers {
+  position: relative;
+  margin: 10px 0;
+  font-size: 24px;
+  z-index: 10;
+  color: white;
+  text-align: left;
+  padding-left: 10px;
+  width: 100%;
+  max-width: 600px;
+}
+
+#balance::before {
+  content: '🪙';
+  margin-right: 10px;
+}
+
+.click-animation {
+  position: absolute;
+  font-size: 36px;
+  color: white;
+  animation: fadeUp 0.5s ease-out forwards;
+  pointer-events: none;
+  z-index: 30;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+
+.progress-bar {
+  width: 80%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin: 10px auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.progress-bar-inner {
+  height: 100%;
+  background: linear-gradient(to right, #00DE70, #0496BC);
+  width: 0;
+  transition: width 0.3s;
+}

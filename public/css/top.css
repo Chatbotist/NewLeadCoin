@@ -1,0 +1,56 @@
+@import url('common.css');
+
+.section-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.ranking-container {
+  flex-grow: 1;
+  overflow-y: auto;
+  width: 100%;
+  max-height: calc(100vh - 160px);
+  padding: 10px;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ranking-item {
+  display: flex;
+  align-items: center;
+  background-color: rgba(128, 128, 128, 0.5);
+  border-radius: 10px;
+  margin: 5px 0;
+  padding: 10px;
+  color: white;
+  width: calc(100% - 20px);
+}
+
+.ranking-item img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.ranking-item .info {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.ranking-item .info .name {
+  font-size: 18px;
+}
+
+.ranking-item .info .followers {
+  font-size: 16px;
+  color: #FFD700;
+}
+
+.ranking-item .rank {
+  font-size: 24px;
+  margin-left: 10px;
+}
